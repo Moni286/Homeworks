@@ -1,1 +1,1 @@
-http://sites.bxmc.poly.edu/~mounirelgharabawy/WebDev/ 
+Blog Post: http://sites.bxmc.poly.edu/~mounirelgharabawy/WebDev/ 
