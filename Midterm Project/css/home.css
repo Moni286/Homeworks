@@ -1,0 +1,132 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	background: url("../images/hacked_bw.jpg") no-repeat center center fixed;
+	background-size: cover;
+}
+
+body{
+	font-family: trebuchet, sans-serif;
+}
+
+div.title{
+	position:absolute;
+	height:25%;
+	width:100%;
+	background-color: #b80000;
+	display: block;
+	text-align: center;
+	font-size: 26px;
+	font-style: italic;
+	z-index:100;
+}
+
+div.title h1{
+	position:relative;
+	color: #fff;
+	top:30%;
+	max-height:26px;
+}
+
+div.content{
+	z-index:10;
+	position:absolute;
+	top:25%;
+	width:100%;
+	height:75%;
+	font-size:0;
+	display:block;
+	text-align: center;
+	overflow:hidden;
+}
+
+div .block{
+	display: inline-block;
+	position: relative;
+	top:0;
+	/*border: solid #B80000 3px;*/
+	height:100%;
+	width:33.3%;
+
+	font-style: bold;
+	font-size:18px;
+	/*color: #B80000;*/
+	color:#fff;
+	/*background-color: rgba(25,25,25,0.25);*/
+	transition: all 0.7s;
+
+	z-index:10;
+	text-align: center;
+
+	overflow: hidden;
+}
+
+div .block:hover{
+	background-color: rgba(25,25,25,0.6);
+}
+
+div .block:hover > a{
+	color:#fff;
+}
+
+div.block h2{
+	position: relative;
+	text-align: center;
+	padding-bottom:18px;
+	z-index:10;
+}
+
+div.block a{
+	position:relative;
+	text-decoration: none;
+	color:#000;
+	font-style: bold;
+	display:block;
+	margin:20px;
+	margin-bottom:0;
+	text-align: justify;
+	transition: all 0.7s;
+	overflow:hidden;
+	z-index:10;
+}
+
+div.block p{
+	text-align: left;
+}
+
+@media only screen and (max-width:767px){
+	div.title{
+		font-size: 22px;
+		width:100%;
+	}
+
+	div.content{
+		overflow: auto;
+		height:auto;
+	}
+
+	div.block{
+		display:block;
+		width:100%;
+	}
+}
+
+@media only screen and (min-width:768px){
+	div.title{
+		font-size: 26px;
+		width:100%;
+	}
+	div.content{
+		overflow: hidden;
+		height:75%;
+	}
+
+	div.block{
+		display:inline-block;
+		width:33.3%;
+		height:100%;
+	}
+}

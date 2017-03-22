@@ -1,0 +1,132 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	font-family: trebuchet, sans-serif;
+}
+
+div.header{
+	position:fixed;
+	width:100%;
+	height:120px;
+	background-color: #b80000;
+	display: block;
+	/*background-image: url("../images/dark_embroidery.png");*/
+	text-align: center;
+	font-size: 26px;
+	font-style: italic;
+	top:0;
+	z-index:100;
+	/*overflow: hidden;*/
+}
+
+div.header h1{
+	position:relative;
+	top:10px;
+}
+
+div.header a{
+	text-decoration: none;
+	color:white;
+}
+
+div.header nav{
+	position: absolute;
+	width:100%;
+	font-size:0;
+	bottom:0;
+	background-color: #444;
+}
+
+div.header nav a{
+	width:33.33%;
+	padding-top:0.3%;
+	padding-bottom: 0.3%;
+	font-size:24px;
+	color:white;
+	display:inline-block;
+	overflow: hidden;
+	transition: background-color 0.7s;
+}
+
+div.header nav a:hover{
+	background-color: rgba(184,0,0,1);
+}
+
+div.sidebar{
+	position:fixed;
+	top:120px;
+	float:left;
+	overflow: hidden;
+	width:15%;
+	display: inline-block;
+	background-color: #444;
+	left:0;
+	bottom:0;
+}
+
+div.sidebar a{
+	color:white;
+	text-decoration: none;
+	padding:10px;
+	display: block;
+	transition: all 0.7s;
+}
+
+div.sidebar a:hover{
+	background-color: #b80000;
+}
+
+div.content a.anchor{
+	display: inline-block;
+    position: relative;
+    top: -120px;
+    visibility: hidden;
+}
+
+div.content{
+	position:absolute;
+	text-align: center;
+	top:120px;
+	margin-left: 17%;
+	margin-right:10%;
+	margin-top:20px;
+	margin-bottom:50px;
+	overflow: hidden;
+	display: inline-block;
+}
+
+div.content h2{
+	text-align: left;
+}
+
+div.content h3{
+	text-align: left;
+	margin-bottom:18px;
+	color:#b80000;
+}
+
+div.content figure{
+	position:relative;
+	float:left;
+	margin-left:auto;
+	margin-right:10px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	text-align: center;
+}
+
+div.content p{
+	margin-top:10px;
+	text-align: left;
+}
+
+div.line{
+	position:relative;
+	width:100%;
+	height:1px;
+	background-color:black;
+	display: inline-block;
+}
