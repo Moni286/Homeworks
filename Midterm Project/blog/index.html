@@ -31,12 +31,14 @@
 			</a>
 		</nav>
 	</div>
-
+	
+	<div class="sidebarcontainer">
 	<div class="sidebar">
 		<ul>
 			<li><a href="#sep"> > September 2016</a></li>
 			<li><a href="#dec"> > December 2016</a></li>
 		</ul>
+	</div>
 	</div>
 
 	<div class="content">
@@ -78,7 +80,47 @@
 
 	</div>
 
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" crossorigin="anonymous"></script>
+	<script type="text/javascript">	
 
+		var anim_show = {
+			'width':'100%'
+		}
+
+		var anim_hide = {
+			'height':'0'
+		}
+
+		function hideVis(obj){
+			obj.animate(anim_hide, 750)
+		}
+
+		function showVis(obj){
+			obj.width(0)
+			obj.height('100%')
+			obj.animate(anim_show, 750)
+		}
+
+		$(document).ready(function(){
+
+			$('.sidebar').height(0)
+			$('.sidebar a').css("white-space","nowrap")
+
+			$('.sidebarcontainer').mouseenter(function(){
+				showVis($('.sidebar'))
+				setTimeout(function(){
+				$('.sidebar a').css("white-space","normal")
+					}, 750)
+			})
+
+			$('.sidebarcontainer').mouseleave(function(){
+				hideVis($('.sidebar'))
+				setTimeout(function(){
+				$('.sidebar a').css("white-space","nowrap")
+					}, 750)
+			})
+		})
+	</script>
 </body>
 
 

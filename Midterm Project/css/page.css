@@ -55,27 +55,39 @@ div.header nav a:hover{
 	background-color: rgba(184,0,0,1);
 }
 
-div.sidebar{
+.sidebarcontainer{
 	position:fixed;
 	top:120px;
 	float:left;
 	overflow: hidden;
 	width:15%;
 	display: inline-block;
+	left:0;
+	bottom:0;
+}
+
+.sidebar{
+	position:relative;
+	float:left;
+	overflow: hidden;
+	width:100%;
+	height:100%;
+	display: inline-block;
 	background-color: #444;
 	left:0;
 	bottom:0;
 }
 
-div.sidebar a{
+.sidebar a{
 	color:white;
 	text-decoration: none;
 	padding:10px;
 	display: block;
+	overflow-wrap: normal;
 	transition: all 0.7s;
 }
 
-div.sidebar a:hover{
+.sidebar a:hover{
 	background-color: #b80000;
 }
 
