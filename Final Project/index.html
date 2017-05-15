@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Home</title>
+
+	<link rel="stylesheet" href="css/home.css"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<script
+	  src="http://code.jquery.com/jquery-2.2.4.min.js"
+	  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+	  crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<!-- google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+
+<body>
+	<div class="title">
+		<a href="about/">
+		<div class="headerText">
+			<h1>Mounir's Blog</h1>
+			<p>Cyber security news and more!</p>
+		</div>
+		</a>
+		
+		<img src="images/header.jpg"/>
+	</div>
+
+	<div class="content">
+		<div class="block blog">
+			<a href="blog/">
+			<h2>Blog</h2>
+			<div id="carousel_blog" class="carousel slide" data-ride="carousel">
+				<div class="carousel-inner" role="listbox">
+					<div class="item active">
+						<h3>Security of Smart Fitness Bands</h3><br>
+						<img src="images/fitnessband.png"/>
+						<p>A research conducted by HP showed that most smart watches, from the top 10 list, used outdated and vulnerable encryption mechanisms for their communication...</p>
+					</div>
+
+					<div class="item">
+						<h3>Cisco WebEx Meetings</h3><br>
+						<img src="images/webex.jpg"/>
+						<p>The discovery of the flaws was brought up by a research project, attempting to scan the internet for SSL/TLS servers. These flaws are not the first of their kind on Cisco&#39;s video-conferencing platform, Webex Meetings...</p>
+					</div>
+				</div>
+			</div>
+			</a>
+		</div>
+
+		<div class="block tutorials">
+			<a href="tutorials/">
+			<h2>Tutorials</h2>
+			<h3>FTP Bruteforce Attack</h3><br>
+			<p>This is an ftp brute-forcing tutorial I found on youtube created by Vari0us Hacking. I found it pretty helpful for network security beginners that want to learn a simple bruteforce attack. Vari0us Hacking uses nmap, one of the most commonly used security scanners, and an essential part of any hacker's arsenal. It is extremely versatile as it features a wide range of network security utilities in a lightweight application...<p>
+			</a>
+		</div>
+
+		<div class="block about">
+			<a href="applets/">
+			<h2>Applets</h2>
+			<div id="carousel_applets" class="carousel slide" data-ride="carousel">
+				<div class="carousel-inner" role="listbox">
+					<div class="item active">
+						<h3>Solar System Simulator</h3><br>
+						<img src="applets/Capture.jpg"/>
+						<p>The part of writing this sketch that I struggled with the most is working in 3D. Since the p5js 3D functionality is fairly new, it is not really as well developed as 2D graphics...</p>
+					</div>
+
+					<div class="item">
+						<h3>Game of Tanks</h3><br>
+						<img src="applets/tanks.jpg"/>
+						<p>For one of my assignments in Nature of Code, I decided to make a 2-player game that has 2 fighting tanks. First step was to create the tank object with the functions...</p>
+					</div>
+				</div>
+			</div>
+		</a>
+		</div>
+
+	</div>
+	
+	<!-- Script to resize gradient responsively to match image -->
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$(window).resize(function(){
+			var perc = 100 * ($(".title").width() - $(".title img").width()) / $(".title").width();
+			$(".title").css("background", "linear-gradient(to right, #b80000 0%,#000000 " + perc + "%)");
+		});
+
+	});
+	</script>
+</body>
+
+</html>

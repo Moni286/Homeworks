@@ -1,0 +1,234 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	font-family: "Open Sans", sans-serif;
+}
+
+div.content #sss_img, iframe{
+	width: 400px;
+	font-family: "Open Sans", sans-serif;
+	display: inline-block;
+	float: right;
+	margin-left: 5%;
+	margin-bottom: 3%;
+}
+
+div.content iframe{
+	height: 400px;
+}
+
+div.content #sss_img{
+	cursor: pointer;
+}
+
+div.myheader{
+	position:fixed;
+	width:100%;
+	height:120px;
+	background-color: #b80000;
+	display: block;
+	/*background-image: url("../images/dark_embroidery.png");*/
+	text-align: center;
+	font-size: 26px;
+	font-style: italic;
+	top:0;
+	z-index:100;
+	/*overflow: hidden;*/
+}
+
+div.myheader h1{
+	position:relative;
+	top:1px;
+}
+
+div.myheader a{
+	text-decoration: none;
+	color:white;
+}
+
+div.myheader nav{
+	position: absolute;
+	width:100%;
+	font-size:0;
+	bottom:0;
+	background-color: #444;
+}
+
+div.myheader nav a{
+	width:25%;
+	padding-top:0.3%;
+	padding-bottom: 0.3%;
+	font-size:24px;
+	color:white;
+	display:inline-block;
+	overflow: hidden;
+	transition: background-color 0.7s;
+}
+
+div.myheader nav a:hover{
+	background-color: rgba(184,0,0,1);
+}
+
+.sidebarcontainer{
+	position:fixed;
+	top:120px;
+	float:left;
+	overflow: hidden;
+	width:15%;
+	display: inline-block;
+	left:0;
+	bottom:0;
+}
+
+div.sidebar{
+	position:relative;
+	float:left;
+	overflow: hidden;
+	width:15%;
+	display: inline-block;
+	background-color: #444;
+	left:0;
+	bottom:0;
+}
+
+div.sidebar li{
+	color:white;
+	text-decoration: none;
+	padding:10px;
+	display: block;
+	transition: all 0.7s;
+	cursor: pointer;
+	overflow-wrap: normal;
+}
+
+div.sidebar li:hover{
+	background-color: #b80000;
+}
+
+div.content a.anchor{
+	display: inline-block;
+    position: relative;
+    top: -120px;
+    visibility: hidden;
+}
+
+div.content{
+	position:absolute;
+	text-align: center;
+	top:120px;
+	margin-left: 17%;
+	margin-right:10%;
+	margin-top:20px;
+	margin-bottom:50px;
+	overflow: hidden;
+	display: inline-block;
+}
+
+div.content a{
+	color: #b80000;
+}
+
+div.content h2{
+	text-align: left;
+}
+
+div.content #tgl_dec, #tgl_sep{
+	position: relative;
+	float: right;
+	top: -45px;
+	/*text-align: top;*/
+	color: #b80000;
+	cursor: pointer;
+}
+
+div.content h3{
+	text-align: left;
+	margin: 0;
+	margin-bottom:18px;
+	color:#b80000;
+}
+
+div.content figure{
+	position:relative;
+	float:left;
+	margin-left:auto;
+	margin-right:10px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	text-align: center;
+}
+
+div.content p{
+	margin-top: 10px;
+	text-align: left;
+}
+
+div.line{
+	position:relative;
+	width:100%;
+	height:1px;
+	background-color:black;
+	display: inline-block;
+}
+
+div.commentsec{
+	border: 2px solid lightgrey;
+	border-radius: 10px;
+	margin-top: 15px;
+	width:90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	text-align: left;
+}
+
+div.commentsec ul{
+	margin: 1%;
+	list-style: none;
+}
+
+div.commentsec li{
+	padding: 5px;
+	border-bottom: 1px solid lightgrey;
+}
+
+div.commentsec .post{
+	text-align: center;
+}
+
+div.commentsec textarea{
+	position: relative;
+	width: 50%;
+	margin: 1%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+div.commentsec input{
+	position: relative;
+	vertical-align: middle;
+}
+
+div.commentsec button{
+	position: relative;
+	margin: 1%;
+	/*padding: 20px;*/
+	text-align: middle;
+	color: #b80000;
+	display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

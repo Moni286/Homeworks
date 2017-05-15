@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<title>Blog</title>
+	
+	<link rel="stylesheet" href="../css/page.css"/>>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<script
+	  src="http://code.jquery.com/jquery-2.2.4.min.js"
+	  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+	  crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+
+
+<body>
+
+	<div class="myheader">
+		<a href="../">
+			<h1>Mounir&#39;s Blog</h1>
+		</a>
+		
+		<nav class="mynavbar">
+			<a href="#">
+				Blog
+			</a>
+
+			<a href="../tutorials/">
+				Tutorials
+			</a>
+
+			<a href="../applets">
+				Applets
+			</a>
+
+			<a href="../about/">
+				About
+			</a>
+		</nav>
+	</div>
+
+	<div class="sidebarcontainer">
+	<div class="sidebar">
+		<ul>
+			<li id="show_sep"> > September 2016</li>
+			<li id="show_dec"> > December 2016</li>
+		</ul>
+	</div>
+	</div>
+
+	<div class="content">
+		<h2>Blog</h2>
+
+		<div class="line"></div>
+		<a class="anchor" name="dec" id="a_dec"></a>
+		
+		<h3>Security of Smart Fitness Bands - December 14, 2016</h3>
+		<button id="tgl_dec" type="button" class="btn btn-default btn-circle glyphicon glyphicon-chevron-up"></button>
+
+		<div id="post_dec">
+
+			<figure>
+			<img src="../images/fitnessband.png" width="300"/>
+			<figcaption>LG Fitness Band</figcaption>
+			</figure>
+
+			<p>With their rise in popularity, Tech companies are rushing to add features to these wearable gadgets to step up to the competition. In this race, consumers&#39; privacy and security is being given little to no attention. Web connectivity, Bluetooth functionality and cross-platform compatibility allow for multiple exploits that would lead to unauthorized access to personal information and sensitive data.</p>
+
+			<p><a href="http://www.zdnet.com/article/smartwatch-security-fails-to-impress-top-devices-vulnerable-to-cyberattack/">A research conducted by HP</a> showed that most smart watches, from the top 10 list, used outdated and vulnerable encryption mechanisms for their communication. An eavesdropper with the right tools could then decrypt this traffic and gain sensitive information sent by the fitness band. The same research showed that it was exceedingly easy to crack a Bluetooth passcode using simple brute force, granting access to the fitness band.</p>
+
+			<p>Currently, the only way to make the device&#39;s communications more secure is to wait for the manufacturing companies to update their security protocols to use more powerful encryption. By updating the firmware, the user will have the latest encryption mechanism installed if the manufacturer updates or changes it.</p>
+
+			<p>As fast as the wearables technology is developing, it tends to neglect security procedures that keep the user&#39;s private data safe. Instead, they are favoring usability and performance over privacy issues. However, as the emphasis on security and privacy is increasing with the rise of the IoT, and with the surge of privacy breaches all around, I hope that tech companies will start prioritizing security and privacy in their development strategy.</p>
+
+			<div id="comments_dec" class="commentsec">
+				<div class="post">
+					<input type="text" id="txt_user_dec" placeholder="Screen Name"/>
+					<textarea id="input_dec" rows='5'></textarea>
+					<button id="btn_dec" class="btn glyphicon glyphicon-send"></button>
+				</div>
+			</div>
+	
+		</div>
+		<div class="line"></div>
+
+		<a class="anchor" name="sep" id="a_sep"></a>
+		<h3>Cisco WebEx Meetings - September 22, 2016</h3>
+		<button id="tgl_sep" type="button" class="btn btn-default btn-circle glyphicon glyphicon-chevron-up"></button>
+
+		<div id="post_sep">
+
+			<figure>
+			<img src="../images/webex.jpg" width="300"/>
+			<figcaption>Cisco WebEx logo</figcaption>
+			</figure>
+
+			<p>Cisco WebEx Meetings provides a platform for videoconferencing, data sharing and VoIP calls. Three days ago, two critical vulnerabilities were discovered. Although Cisco claims the vulnerabilities were never exploited in the wild, the possibility still exists that it was in fact used for malicious purposes. The vulnerabilities found were:<br/><br/> <u>CVE-2016-1482</u> &#45; This vulnerability, classified as a &quot;critical&quot; issue, could allow an unauthorized attacker to inject malicious commands on the targeted system, bypassing all security restrictions on the DMZ.<br/> <u>CVE-2016-1483</u> &#45; This flaw, classified as a &quot;high severity&quot; issue, allows a remote attacker to perform a DoS attack on the targeted system.</p>
+			
+			<p>The discovery of the flaws was brought up by a research project, attempting to scan the internet for SSL/TLS servers. These flaws are not the first of their kind on Cisco&#39;s video-conferencing platform, Webex Meetings. In 2016, 2 other flaws were discovered on the platform up until now. Moreover, in 2015, a whopping 8 security vulnerabilities were discovered, 6 of which allow unauthorized access to user information.</p>
+			
+			<p>This raises a serious concern in terms of user privacy and safety of their sensitive details. It also raises some uncertainty about whether the platform users&#39; privacy has already been compromised and if so, how many of them were affected.</p>
+
+			<div id="comments_sep" class="commentsec">
+				<div class="post">
+					<input type="text" id="txt_user_sep" placeholder="Screen Name"/>
+					<textarea id="input_sep" rows='5'></textarea>
+					<button id="btn_sep" class="btn glyphicon glyphicon-send"></button>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	
+
+	<script type="text/javascript">
+		var comments = [["Sample Post.", "192.192.168.168", "United States"]];
+
+		function init_comments(month){
+			// Commenting System
+			console.log(month)
+			var cList = document.createElement("ul")
+			for (c in comments){
+				var uNode = document.createElement('li');
+				uNode.appendChild(document.createTextNode(comments[c][1]+ " - " + comments[c][2] + ": \n" + comments[c][0]));
+				cList.appendChild(uNode);
+			}
+
+			$("#comments_" + month).prepend(cList);
+
+			$("#btn_" + month).click(function(){
+
+				if ($('#input_' + month).val() != ""){
+
+					var ipdata="";
+
+					// Get IP and location from freegeoip
+					$.getJSON('https://freegeoip.net/json/?callback=?', function(data) {
+						ipdata = data;
+						var comment = [];
+						comment.push($('#input_' + month).val());
+						if ($("#txt_user").val()!=""){
+							comment.push($("#txt_user_" + month).val());
+						}else{
+							comment.push(data.ip)
+						}
+						comment.push(ipdata.country_name);
+						comments.push(comment);
+
+						var uNode = document.createElement('li');
+						uNode.appendChild(document.createTextNode(comment[1] + " - " + comment[2] + ": " + comment[0]));
+						cList.appendChild(uNode);
+
+						$('#input_' + month).val('');
+						$("#txt_user_" + month).val('');
+					});
+				};
+			});
+		}
+
+		$(document).ready(function(){
+
+			init_comments("dec");
+			init_comments("sep");
+
+			var dec_visible = 1;
+			var sep_visible = 1;
+
+			$("#tgl_dec").click(function(){
+				if (dec_visible){
+					$("#post_dec").slideUp();
+					dec_visible = 0;
+					$("#tgl_dec").removeClass('glyphicon glyphicon-chevron-up').addClass('glyphicon glyphicon-chevron-down');
+				}else{
+					$("#post_dec").slideDown();
+					dec_visible = 1;
+					$("#tgl_dec").removeClass('glyphicon glyphicon-chevron-down').addClass('glyphicon glyphicon-chevron-up');
+				}
+
+			});
+
+			$("#tgl_sep").click(function(){
+				if (sep_visible){
+					$("#post_sep").slideUp();
+					sep_visible = 0;
+					$("#tgl_sep").removeClass('glyphicon glyphicon-chevron-up').addClass('glyphicon glyphicon-chevron-down');
+				}else{
+					$("#post_sep").slideDown();
+					sep_visible = 1;
+					$("#tgl_sep").removeClass('glyphicon glyphicon-chevron-down').addClass('glyphicon glyphicon-chevron-up');
+				}
+
+			});
+
+			$("#show_sep").click(function(){
+				if (dec_visible){
+					$("#post_dec").slideUp();
+					dec_visible = 0;
+					$("#tgl_dec").removeClass('glyphicon glyphicon-chevron-up').addClass('glyphicon glyphicon-chevron-down');
+				}
+
+				if (sep_visible==0){
+					$("#post_sep").slideDown();
+					sep_visible = 1;
+					$("#tgl_sep").removeClass('glyphicon glyphicon-chevron-down').addClass('glyphicon glyphicon-chevron-up');
+				}
+				setTimeout(function(){
+					$("html, body").animate({
+						scrollTop:$("#a_sep").offset().top
+					},500);
+
+				}, 500);
+			});
+
+			$("#show_dec").click(function(){
+				if (sep_visible){
+					$("#post_sep").slideUp();
+					sep_visible = 0;
+					$("#tgl_sep").removeClass('glyphicon glyphicon-chevron-up').addClass('glyphicon glyphicon-chevron-down');
+				}
+
+				if (dec_visible==0){
+					$("#post_dec").slideDown();
+					sep_visible = 1;
+					$("#tgl_dec").removeClass('glyphicon glyphicon-chevron-down').addClass('glyphicon glyphicon-chevron-up');
+				}
+				setTimeout(function(){
+					$("html, body").animate({
+						scrollTop:$("#a_dec").offset().top
+					},500);
+
+				}, 500);
+			});
+		});
+	</script>
+
+	<script type="text/javascript">	
+
+		var anim_show = {
+			'width':'100%'
+		}
+
+		var anim_hide = {
+			'height':'0'
+		}
+
+		function hideVis(obj){
+			obj.animate(anim_hide, 750)
+		}
+
+		function showVis(obj){
+			obj.width(0)
+			obj.height('100%')
+			obj.animate(anim_show, 750)
+		}
+
+		$(document).ready(function(){
+
+			$('.sidebar').height(0)
+			$('.sidebar a').css("white-space","nowrap")
+
+			$('.sidebarcontainer').mouseenter(function(){
+				showVis($('.sidebar'))
+				setTimeout(function(){
+				$('.sidebar a').css("white-space","normal")
+					}, 750)
+			})
+
+			$('.sidebarcontainer').mouseleave(function(){
+				hideVis($('.sidebar'))
+				setTimeout(function(){
+				$('.sidebar a').css("white-space","nowrap")
+					}, 750)
+			})
+		})
+	</script>
+
+
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
